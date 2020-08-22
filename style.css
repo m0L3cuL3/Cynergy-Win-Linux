@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(74, 98, 121);
+}
+
+.jumbotron {
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(59, 71, 110), rgb(51, 71, 90));
+}
+
+.card {
+    background-image: linear-gradient(to bottom, rgb(59, 71, 110), rgb(51, 71, 90));
+}
