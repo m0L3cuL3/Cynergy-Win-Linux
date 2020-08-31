@@ -1,12 +1,11 @@
 const electron = require('electron')
 const url = require('url')
 const path = require('path')
-const http = require('http')
 const config = require('./config.json')
 
 const { app, BrowserWindow, Menu} = electron
 const { shell } = require('electron')
-const { remote } = require('electron')
+const { exit } = require('process')
 
 const port = config.port
 const ngrokServer = config.ngrok
@@ -47,7 +46,7 @@ app.on('ready', () => {
 function onLocalhost() {
     /* CREATE WINDOW */
     localWindow = new BrowserWindow({
-        width: 1000,
+        width: 1200,
         height: 1000,
         title: 'Localhost',
         autoHideMenuBar: true,
@@ -143,6 +142,12 @@ const template = [
                 }
             }
         ]
+    },
+    {
+        label: "Exit",
+        click() {
+            app.exit()
+        }
     }
 ]
 
